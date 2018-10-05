@@ -1,0 +1,39 @@
+<! DOCTYPE html">
+<html xmlns= "http://www.w3.org/1999/xhtml" xml:lang="es" lang= "es"/>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html charset=UTF-8"/>
+		<link href="./css/tiendaVirtual.css" rel="stylesheet" type = "text/css">	
+		<title>Tienda virtual</title>
+	</head>
+	
+	<body>
+		<ul>
+			<li><a href="indice.html">Volver</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Cliente</a>
+				<div class="dropdown-content">
+					<a href = "registrarCliente.html">Registrarse</a>
+				</div>
+			</li>
+		</ul>
+
+		<div id = "contenedor">
+			<h1>Inicio sesión del cliente</h1>
+			<?php
+				$token = uniqid();
+				$_SESSION['token'] = $token;
+			?>
+			<form action = "iniciarSesionCliente.php" method = "post">
+				<input type = 'hidden' name = 'token' value = '$token'/>
+				Email: 
+				<input type = "email" name = "correo" /><br><br>
+				Contraseña: 
+				<input type = "password" name = "paswd" /><br><br>
+				<input type = "submit" value = "Iniciar sesion"/>
+			</form><br>
+			<form action = "registrarCliente.html" method = "post">
+				<input type = "submit" value = "Registrarse"/>
+			</form>
+		</div>
+	</body>
+</html>

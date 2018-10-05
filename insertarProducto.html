@@ -1,0 +1,33 @@
+<! DOCTYPE html">
+<html xmlns= "http://www.w3.org/1999/xhtml" xml:lang="es" lang= "es"/>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html charset=UTF-8"/>
+		<link href="./css/tiendaVirtual.css" rel="stylesheet" type = "text/css">	
+		<title>Tienda virtual</title>
+	</head>
+	
+	<body>
+		<ul>
+			<li><a href="indiceAdministrador.html">Volver</a></li>
+		</ul>
+
+		<div id = "contenedor">
+			<h1>Añadir productos</h1>
+			<form action = "inserccionProducto.php" method = "post" enctype = "multipart/form-data">
+				Nombre del producto: 
+				<input type = "text" name = "nombreProducto" /><br><br>
+				Descripcion del producto: 
+				<input type = "text" name = "descripProducto"/><br><br>
+				Precio del producto: 
+				<input type = "number" name = "precioProducto" step = "any" min = "0.0" value = "0.0"/><br><br>
+				IVA del producto:
+				<input type = "number" name = "ivaProducto" min = "0" value = "0"/><br><br>
+				Stock del producto:
+				<input type = "number" name = "stockProducto" min = "0" value = "0"/><br><br>
+				Imagen del producto:
+				<input type = "file" name = "imagen"/><br><br>
+				<input type = "submit" value = "Insertar producto"/>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<! DOCTYPE html">
+<html xmlns= "http://www.w3.org/1999/xhtml" xml:lang="es" lang= "es"/>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html charset=UTF-8"/>
+		<link href="./css/tiendaVirtual.css" rel="stylesheet" type = "text/css">	
+		<title>Tienda virtual</title>
+	</head>
+	
+	<body>
+		<ul>
+			<li><a href="cerrarSesion.php">Cerrar sesión</a></li>
+		</ul>
+
+		<div id = "contenedor">
+			<?php	
+				if(!isset($_SESSION['identificado'])){
+					session_start();
+					$token = uniqid();
+					$_SESSION['token'] = $token;
+			?>
+			<input type = 'hidden' name = 'token' value = '$token'/>
+			<h1>Menú de opciones clientes</h1>
+			<a href = "listadoProductos.php">Listado de productos</a>
+			<br>
+			<?php	
+				} else {
+					header("Location:indice.html");
+				}
+			?>
+		</div>
+	</body>
+</html>

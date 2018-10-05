@@ -1,0 +1,37 @@
+﻿<! DOCTYPE html">
+<html xmlns= "http://www.w3.org/1999/xhtml" xml:lang="es" lang= "es"/>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html charset=UTF-8"/>
+		<link href="./css/tiendaVirtual.css" rel="stylesheet" type = "text/css">	
+		<title>Tienda virtual</title>
+	</head>
+	
+	<body>
+		<ul>
+			<li><a href="cerrarSesion.php">Cerrar sesion</a></li>
+		</ul>
+
+		<div id = "contenedor">
+			<?php	
+				session_start();
+				if(($_SESSION['identificado'] == "Administrador") && (isset($_SESSION['identificado']))){
+					$token = uniqid();
+					$_SESSION['token'] = $token;
+			?>
+			<input type = 'hidden' name = 'token' value = '$token'/>
+			<h1>Menú de opciones genericas</h1>
+			<a href = "listarProductos.php">Listado de productos</a>
+			<br>
+			<h1>Menú de opciones del administrador</h1>
+			<a href = "eliminarProductos.php">Eliminar uno o varios productos</a>
+			<br><br>
+			<a href = "insertarProducto.html">Añadir un nuevo producto</a>
+			<br><br>
+			<?php	
+				} else {
+					header("Location:indice.html");
+				}
+			?>
+		</div>
+	</body>
+</html>

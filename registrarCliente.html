@@ -1,0 +1,51 @@
+<! DOCTYPE html">
+<html xmlns= "http://www.w3.org/1999/xhtml" xml:lang="es" lang= "es"/>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html charset=UTF-8"/>
+		<link href="./css/tiendaVirtual.css" rel="stylesheet" type = "text/css">	
+		<title>Tienda virtual</title>
+	</head>
+	
+	<body>
+		<ul>
+			<li><a href="indice.html">Volver</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Cliente</a>
+				<div class="dropdown-content">
+					<a href = "logueoCliente.html">Iniciar sesion</a>
+				</div>
+			</li>
+		</ul>
+
+		<div id = "contenedor">
+			<h1 style = "color:blue">Registro de cliente</h1>
+			<form action = "registrado.php" method = "post">
+				Nombre: 
+					<input type = "text" name = "nombre" placeholder = "Maria"/><br><br>
+				Direccion: 
+					<input type = "text" name = "direccion" placeholder = "c\las flores"/><br><br>
+				CP: 
+					<input type = "text" name = "cp" placeholder = "45223"/><br><br>
+				Email: 
+					<input type = "emial" name = "correo" placeholder = "correoejemplo@gmail.com"/><br><br>
+				Contraseña: 
+					<input type = "password" name = "passwd"/><br><br>
+				Teléfono: 
+					<input type = "text" name = "telefono" placeholder = "660214259"/><br><br>
+				Tipo de tarjeta: 
+					<select name = "tarjetas" >
+						<option value = ""></option>
+						<option value = "debito">Debito</option>
+						<option value = "credito">Credito</option>
+						<option value = "prepago">Prepago</option>
+						<option value = "revolving">Revolving</option>
+					</select><br><br>
+				Numero tarjeta de crédito:
+					<input type = "text" name = "numTarjeta" placeholder = "1234567891234567" maxlength = "16" minlength = "16"/><br><br>
+				Fecha de caducidad:
+					<input type = "date" name = "fechaCad"/><br><br>
+				<input type = "submit" value = "Registrarse"/>
+			</form>
+		</div>
+	</body>
+</html>

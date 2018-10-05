@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns= "http://www.w3.org/1999/xhtml" xml:lang="es" lang= "es"/>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html charset=UTF-8"/>
+		<link href="./css/tiendaVirtual.css" rel="stylesheet" type = "text/css">	
+		<title>Tienda virtual</title>
+	</head>
+	
+	<body>
+		<ul>
+			<li><a href="indice.html">Volver</a></li>
+			<li>
+				<a href = "logueoAdmin.html">Administrador</a>
+			</li>
+		</ul>
+
+		<div id = "contenedor">
+			<h1>Inicio sesion del administrador</h1>
+			<form action = "iniciarSesionAdmin.php" method = "post">
+				Usuario: 
+					<input type = "text" name = "user" /><br><br>
+				Contraseña: 
+					<input type = "password" name = "paswd" /><br><br>
+				<input type = "submit" name = "registro" value = "Registrarse"/>
+			</form>
+		</div>
+	</body>
+</html>
